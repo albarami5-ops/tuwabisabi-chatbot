@@ -20,12 +20,7 @@ const app = express();
 // ── CORS: permite peticiones desde tu dominio ──────────────────────────────
 // Cambia el origin por tu dominio cuando estés en producción
 app.use(cors({
-  origin: [
-    'https://tuwabisabi.com',
-    'https://www.tuwabisabi.com',
-    /\.hostinger\.com$/,          // dominios de vista previa de Hostinger
-    'http://localhost:3000'       // para pruebas locales
-  ],
+  origin: true,
   methods: ['POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
